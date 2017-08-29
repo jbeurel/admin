@@ -258,12 +258,14 @@ const fetchWithAuth = (url, options = {}) => {
 
 class Admin extends Component {
   render() {
-    return <HydraAdmin restClient={hydraClient(entrypoint, fetchWithAuth)} authClient={authClient}/>
+    return <HydraAdmin entrypoint={entrypoint} restClient={hydraClient(entrypoint, fetchWithAuth)} authClient={authClient}/>
   }
 }
 
 export default Admin;
 ```
+
+https://github.com/api-platform/admin/blob/master/src/hydra/HydraAdmin.js#L15
 
 Refer to [the chapter dedicated to authentication in the Admin On Rest documentation](https://marmelab.com/admin-on-rest/Authentication.html)
 for more information.
